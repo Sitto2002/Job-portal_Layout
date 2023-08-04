@@ -1,0 +1,763 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  background-color: purple;
+}
+.container {
+  display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid cyan;
+    position: inherit;
+    background: cyan;
+    filter: drop-shadow(6px 6px 6px black);
+    border-radius: 10px;
+}
+
+ul {
+  display: flex;
+    margin: 1px;
+    padding: 1px;
+}
+
+h3 {
+   margin: 10px;
+   padding: 15px;
+   color: white;
+  text-shadow: 1px 1px 2px black;
+ }
+
+ .nav-img {
+  border-radius: 100px;
+    height: 75px;
+    width: 75px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 550px;
+    filter: drop-shadow( 2px 2px 2px black);
+ }
+
+ h3:hover {
+  cursor : pointer;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  height: 70px;
+  width: 99px;
+  text-align: center;
+ }
+
+ .nav-img:hover {
+  cursor: pointer;
+  height: 85px;
+  width: 85px;
+ }
+
+.box-1, .box-2, .box-3 {
+  border: 2px solid white;
+  background: brown;
+  color: white;
+  font-family: -webkit-body;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  opacity: 70%;
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover {
+  background: white;
+  color: cyan;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --font-medium: 500;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--white-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  background: palegreen ;
+}
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+.login__content, .login__box {
+  display: grid;
+}
+.login__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+.login__icon, .login__eye {
+  font-size: 1.25rem;
+}
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+.login__box-input {
+  position: relative;
+}
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.login__check, .login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login__check {
+  margin-bottom: 1.5rem;
+}
+.login__check-label, .login__forgot, .login__register {
+  font-size: var(--small-font-size);
+}
+.login__check-group {
+  column-gap: 0.5rem;
+}
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+.login__forgot {
+  color: var(--white-color);
+}
+.login__forgot:hover {
+  text-decoration: underline;
+}
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background: black;
+  color: white;
+}
+.login__register {
+  text-align: center;
+}
+.login__register a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+
+.login__input:focus + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+  .login__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+  .login__title {
+    font-size: 2rem;
+  }
+}
+
+#tsparticles {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: none;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+  margin: auto auto;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box h2 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox label {
+  color: #fff;
+}
+
+.box .inputBox input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.box input[type="submit"], .box button[type="submit"], a.button {
+  font-family: sans-serif;
+  background: #03a9f4;
+  font-size: 11px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 2px 10px 2px 0;
+  display: inline-block;
+}
+
+.box input[type="submit"]:hover, .box button[type="submit"]:hover, a.button:hover {
+  opacity: 0.8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.outer-box{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, #3ed8ff, #a8f5ff);
+}
+
+.inner-box{
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 20px 40px;
+    /* background-color: #ffffff09; */
+    background: linear-gradient(to top left, #ffffffff, #ffffff33);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #2773a5;
+    z-index: 2;
+
+}
+
+/* signup form  */
+.signup-header h1{
+    font-size: 2.5rem;
+    color: #212121;
+}
+
+.signup-header p{
+    font-size: 0.9rem;
+    columns: #555;
+}
+.signup-body{
+    margin: 20px 0;
+}
+
+.signup-body p{
+    margin: 10px 0;
+}
+
+.signup-body p label{
+    display: block;
+    font-weight: bold;
+}
+
+.signup-body p input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+#submit{
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: #2773a5;
+}
+
+.signup-footer p{
+    color: #555;
+    text-align: center;
+}
+
+.signup-footer p a{
+    color: #2773a5;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background: linear-gradient(to top right, #ffffff33, #ffffffff);
+    position: absolute;
+}
+
+.c1{
+    top: 100px;
+    left: 40px;
+}
+
+.c2{
+    bottom: 200px;
+    right: 50px;
+}
+
+/* signin form  */
+.signin-header h1{
+    font-size: 2.5rem;
+    color: #212121;
+}
+
+.signup-header p{
+    font-size: 0.9rem;
+    columns: #555;
+}
+.signin-body{
+    margin: 20px 0;
+}
+
+.signin-body p{
+    margin: 10px 0;
+}
+
+.signin-body p label{
+    display: block;
+    font-weight: bold;
+}
+
+.signin-body p input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+#submit{
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: #2773a5;
+}
+
+.signin-footer p{
+    color: #555;
+    text-align: center;
+}
+
+.signin-footer p a{
+    color: #2773a5;
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  margin-top: 40%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: darkorange;
+  width: 100%;
+  box-shadow: 10px 2px 5px 5px black;
+}
+
+.parts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.class-1, .class-2, .class-3, .class-4 {
+  filter: drop-shadow(6px 6px 6px black);
+  border: 2px solid white;
+  border-radius: 10px;
+  background: crimson;
+  margin: 10px;
+  padding: 10px;
+  width: 275px;
+  height: 200px;
+}
+
+.class-1img {
+  height: 45px;
+  border-radius: 50%;
+  width: 45px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.class-4img {
+  border: none;
+  border-radius: 5px;
+  height:100px;
+  width: 190px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.big {
+  font-family: sans-serif;
+  color: white;
+  margin: 10px;
+  padding: 2px;
+}
+
+h5 {
+  margin: 10px;
+  padding: 5px;
+  font-family: auto;
+}
+
+.big:hover {
+  cursor: pointer;
+  color:black
+}
+
+h1 {
+  font-family: cursive;
+  margin: 20px;
+  padding: 20px;
+  border: none;
+}
+
+h1:hover {
+  color: white;
+  cursor: pointer;
+}
+
+h2 {
+  display: flex;
+    text-align: center;
+    font-family: auto;
+    color: darkkhaki;
+    margin: 10px;
+    padding: 10px;
+}
+
+h2:hover {
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 5px;
+  background: black;
+  filter: drop-shadow(2px 4px 6px orange);
+}
+
+button:hover {
+  background-attachment: white;
+  color: black;
+}
+
+.beech {
+    display: flex;
+    padding: 5px;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.profile-container, .accept-job, .recieve-job {
+  position: inherit;
+  text-align: center;
+  margin: 15px;
+  padding: 20px;
+}
+
+.profile-img {
+  border: none;
+    border-radius: 50%;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.profile-img:hover {
+  border: 2px solid cyan;
+cursor: pointer;
+}
+
+.company-img{
+  display: table-column;
+  position: absolute;
+  margin: 10px ;
+  padding: 10px;
+}
+
+.row2 {
+  display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.row2 img {
+  border: none;
+  border-radius: 50px;
+  height: 190px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.row1 {
+  display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.row1 img {
+  border: none;
+  border-radius: 50px;
+  height: 220px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.top-heading {
+  position: fixed;
+  margin-top: 50px;
+  margin-right: 700px;   
+}
+
+.top-heading img {
+  border: none ;
+  border-radius: 5px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.job-form {
+  width: 400px;
+  margin-top: 10px;
+  margin-left: 650px;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  background: darkcyan;
+  filter: drop-shadow( 5px 5px 5px black);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+select {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
